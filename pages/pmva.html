@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PMVA Training | Deuvick International</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<style>
+body{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background:#f4fbf6;
+  color:#0f172a;
+}
+
+.glass{
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(14px);
+  border:1px solid rgba(16,185,129,0.15);
+}
+
+.card{
+  transition: .3s ease;
+}
+.card:hover{
+  transform: translateY(-6px);
+}
+
+.btn{
+  transition:.3s ease;
+}
+.btn:hover{
+  transform: scale(1.03);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="fixed w-full bg-white shadow-sm z-50">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-green-600 text-white flex items-center justify-center rounded-lg font-bold">P</div>
+<h1 class="font-bold text-green-700 text-xl">PMVA Training</h1>
+</div>
+
+<nav class="hidden md:flex gap-8 font-medium text-gray-600">
+<a href="../index.html" class="hover:text-green-600">Home</a>
+<a href="contact-pmva.html" class="hover:text-green-600">Contact Us </a>
+<a href="contact-pmva.html" class="bg-green-600 text-white px-5 py-2 rounded-full">Enroll</a>
+</nav>
+
+<button onclick="toggleMenu()" class="md:hidden text-2xl text-green-700">☰</button>
+</div>
+    
+<div id="menu" class="hidden md:hidden bg-white border-t px-6 py-4 space-y-3">
+<a href="../index.html">Home</a>
+<a href="contact-pmva.html">Contact Us</a>
+<a href="contact-pmva.html" class="block bg-green-600 text-white text-center py-2 rounded-lg">Enroll</a>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="pt-28 pb-16 px-6">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+<div data-aos="fade-right">
+<h1 class="text-5xl font-bold leading-tight text-green-800">
+Professional PMVA Training
+</h1>
+<p class="mt-4 text-gray-600 text-lg leading-8">
+PMVA (Prevention and Management of Violence and Aggression) is a structured training framework used across healthcare, mental health, social care, education and security settings to reduce the risk of violence and manage aggressive behaviour safely, lawfully and ethically.
+</p>
+
+<div class="mt-6 grid sm:grid-cols-2 gap-4">
+<div class="bg-green-50 border border-green-100 rounded-2xl p-4">
+<p class="font-semibold text-green-700">Early Recognition</p>
+<p class="text-sm text-gray-600 mt-1">Identify escalating behaviour before crisis situations develop.</p>
+</div>
+
+<div class="bg-green-50 border border-green-100 rounded-2xl p-4">
+<p class="font-semibold text-green-700">De-escalation First</p>
+<p class="text-sm text-gray-600 mt-1">Focus on prevention and communication before intervention.</p>
+</div>
+</div>
+
+<div class="mt-8 flex gap-4">
+<a class="btn bg-green-600 text-white px-6 py-3 rounded-full font-semibold">Enroll Now</a>
+<a href="#calendar" class="btn border border-green-600 text-green-700 px-6 py-3 rounded-full">View Schedule</a>
+</div>
+</div>
+
+<img data-aos="zoom-in"
+src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1400&auto=format&fit=crop"
+class="rounded-3xl shadow-xl">
+
+</div>
+</section>
+
+<!-- CALENDAR + COUNTDOWN -->
+<section id="calendar" class="px-6 pb-20">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10">
+
+<!-- CALENDAR -->
+<div class="glass rounded-3xl p-6" data-aos="fade-up">
+
+<h2 class="text-xl font-bold text-green-700 mb-6 flex items-center gap-2">
+<i class="fa fa-calendar"></i> Upcoming Training Dates
+</h2>
+
+<div class="space-y-4">
+
+<div class="flex items-center gap-4 p-4 rounded-2xl bg-green-50 border border-green-100">
+<div class="bg-green-600 text-white font-bold px-4 py-2 rounded-xl text-center">JUN<br>15</div>
+<div>
+<p class="font-semibold">3-Day PMVA Certification</p>
+<p class="text-sm text-gray-500">Full accredited training</p>
+</div>
+</div>
+
+<div class="flex items-center gap-4 p-4 rounded-2xl bg-white border border-green-100">
+<div class="bg-green-500 text-white font-bold px-4 py-2 rounded-xl text-center">JUN<br>28</div>
+<div>
+<p class="font-semibold">Refresher Course</p>
+<p class="text-sm text-gray-500">Annual update training</p>
+</div>
+</div>
+
+<div class="flex items-center gap-4 p-4 rounded-2xl bg-white border border-green-100">
+<div class="bg-green-700 text-white font-bold px-4 py-2 rounded-xl text-center">JUL<br>10</div>
+<div>
+<p class="font-semibold">Advanced PMVA</p>
+<p class="text-sm text-gray-500">High-risk intervention skills</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- COUNTDOWN -->
+<div class="glass rounded-3xl p-10 text-center" data-aos="fade-up">
+<h2 class="text-xl font-bold text-green-700 mb-6">Next Training Starts In</h2>
+
+<div id="timer" class="text-5xl font-extrabold text-green-600 mb-4">00:00:00:00</div>
+<p class="text-gray-500">Days : Hours : Minutes : Seconds</p>
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="py-20 px-6 bg-green-50">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+
+<img 
+src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1400&auto=format&fit=crop"
+class="rounded-3xl shadow-xl"
+data-aos="fade-right">
+
+<div data-aos="fade-left">
+<h2 class="text-4xl font-bold text-green-700 mb-6">
+About Our PMVA Training
+</h2>
+
+<p class="text-gray-600 leading-8 mb-4">
+Our Prevention and Management of Violence and Aggression (PMVA) training programme equips healthcare professionals, support workers, carers and agency staff with practical techniques to safely manage challenging behaviour.
+</p>
+
+<p class="text-gray-600 leading-8 mb-6">
+PMVA training focuses on prevention, proportionate lawful intervention only as a last resort, and protecting the safety, dignity and human rights of everyone involved. Training sessions combine theoretical learning, communication strategies, dynamic risk assessment and evidence‑based physical intervention techniques delivered by experienced instructors.
+</p>
+
+<div class="grid md:grid-cols-2 gap-4 mb-6">
+<div class="bg-white p-5 rounded-2xl border border-green-100 shadow-sm">
+<h3 class="font-bold text-green-700 mb-2">Aligned Standards</h3>
+<ul class="text-sm text-gray-600 space-y-2">
+<li>• NHS & CQC expectations</li>
+<li>• BILD ACT / RRN standards</li>
+<li>• Mental Health & Capacity legislation</li>
+<li>• Positive & Proactive Care</li>
+</ul>
+</div>
+
+<div class="bg-white p-5 rounded-2xl border border-green-100 shadow-sm">
+<h3 class="font-bold text-green-700 mb-2">Training Approach</h3>
+<ul class="text-sm text-gray-600 space-y-2">
+<li>• Trauma-informed practice</li>
+<li>• Scenario-based learning</li>
+<li>• Least restrictive interventions</li>
+<li>• Qualified accredited trainers</li>
+</ul>
+</div>
+</div>
+
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white rounded-2xl p-5 shadow-sm border border-green-100">
+<h3 class="font-bold text-green-700 text-2xl">500+</h3>
+<p class="text-sm text-gray-500">Professionals Trained</p>
+</div>
+
+<div class="bg-white rounded-2xl p-5 shadow-sm border border-green-100">
+<h3 class="font-bold text-green-700 text-2xl">98%</h3>
+<p class="text-sm text-gray-500">Training Satisfaction</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- COURSES -->
+<section class="py-20 px-6 bg-white">
+<div class="max-w-7xl mx-auto">
+
+<h2 class="text-4xl font-bold text-center text-green-700 mb-14" data-aos="fade-up">
+Our PMVA Training Courses
+</h2>
+
+<div class="grid lg:grid-cols-2 gap-8">
+
+<div class="bg-green-50 rounded-3xl p-8 border border-green-100 shadow-sm" data-aos="fade-right">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-2xl font-bold text-green-700">1-Day Refresher</h3>
+<span class="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">BILD ACT Certified</span>
+</div>
+
+<p class="text-gray-600 leading-7 mb-6">
+Designed for staff who have completed PMVA training previously and require annual renewal and updated competency assessment.
+</p>
+
+<div class="grid sm:grid-cols-2 gap-3 text-sm text-gray-700">
+<div>• Legal updates</div>
+<div>• Safety principles</div>
+<div>• Breakaway techniques</div>
+<div>• Dynamic risk assessment</div>
+<div>• Non-harmful restraint</div>
+<div>• Professional refresher assessment</div>
+</div>
+</div>
+
+<div class="bg-green-700 text-white rounded-3xl p-8 shadow-xl" data-aos="fade-left">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-2xl font-bold">2-Day / 3-Day Full Course</h3>
+<span class="bg-white text-green-700 px-4 py-2 rounded-full text-sm font-semibold">Advanced Training</span>
+</div>
+
+<p class="leading-7 mb-6 text-green-50">
+Comprehensive PMVA training designed for professionals working in challenging environments including mental health, supported living and specialist education.
+</p>
+
+<div class="grid sm:grid-cols-2 gap-3 text-sm">
+<div>• Law & ethics</div>
+<div>• Health & safety</div>
+<div>• Positional asphyxia awareness</div>
+<div>• Substance-related aggression</div>
+<div>• Low & high-level breakaway</div>
+<div>• Restrictive interventions</div>
+<div>• Non-restrictive interventions</div>
+<div>• Post-incident debriefing</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- COURSE CONTENT -->
+<section class="py-20 px-6 bg-green-50">
+<div class="max-w-7xl mx-auto">
+
+<h2 class="text-3xl font-bold text-center text-green-700 mb-14" data-aos="fade-up">
+What You Will Learn
+</h2>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-green-100" data-aos="zoom-in">
+<i class="fa fa-comments text-3xl text-green-600 mb-4"></i>
+<h3 class="font-bold mb-2">De-escalation</h3>
+<p class="text-sm text-gray-600">Communication techniques for calming difficult situations safely.</p>
+</div>
+
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-green-100" data-aos="zoom-in" data-aos-delay="100">
+<i class="fa fa-shield text-3xl text-green-600 mb-4"></i>
+<h3 class="font-bold mb-2">Risk Reduction</h3>
+<p class="text-sm text-gray-600">Learn how to identify and reduce potential risks in care settings.</p>
+</div>
+
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-green-100" data-aos="zoom-in" data-aos-delay="200">
+<i class="fa fa-user-nurse text-3xl text-green-600 mb-4"></i>
+<h3 class="font-bold mb-2">Care Techniques</h3>
+<p class="text-sm text-gray-600">Safe intervention approaches aligned with professional standards.</p>
+</div>
+
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-green-100" data-aos="zoom-in" data-aos-delay="300">
+<i class="fa fa-certificate text-3xl text-green-600 mb-4"></i>
+<h3 class="font-bold mb-2">Certification</h3>
+<p class="text-sm text-gray-600">Receive recognised PMVA certification after successful completion.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- COURSE STRUCTURE -->
+<section class="py-20 px-6 bg-white">
+<div class="max-w-7xl mx-auto">
+
+<h2 class="text-3xl font-bold text-center text-green-700 mb-14">
+Course Structure
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="bg-green-50 border border-green-100 rounded-3xl p-8 text-center" data-aos="zoom-in">
+<div class="w-16 h-16 mx-auto bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-6">1</div>
+<h3 class="font-bold text-xl text-green-700 mb-4">Day 1</h3>
+<p class="text-gray-600 leading-7">
+Law, safety principles, risk awareness, trauma-informed practice and de-escalation strategies.
+</p>
+</div>
+
+<div class="bg-green-50 border border-green-100 rounded-3xl p-8 text-center" data-aos="zoom-in" data-aos-delay="100">
+<div class="w-16 h-16 mx-auto bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-6">2</div>
+<h3 class="font-bold text-xl text-green-700 mb-4">Day 2</h3>
+<p class="text-gray-600 leading-7">
+Breakaway techniques, non-harmful restraint, safety positioning and post-incident debriefing.
+</p>
+</div>
+
+<div class="bg-green-50 border border-green-100 rounded-3xl p-8 text-center" data-aos="zoom-in" data-aos-delay="200">
+<div class="w-16 h-16 mx-auto bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-6">3</div>
+<h3 class="font-bold text-xl text-green-700 mb-4">Day 3</h3>
+<p class="text-gray-600 leading-7">
+Advanced interventions, scenario-based assessments and practical competency evaluation.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CERTIFICATION -->
+<section class="py-20 px-6 bg-green-700 text-white">
+<div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+
+<div data-aos="fade-right">
+<h2 class="text-4xl font-bold mb-6">Certification & Compliance</h2>
+<p class="leading-8 text-green-50 mb-6">
+Delegates receive a BILD ACT-aligned PMVA certification upon successful completion. Certificates are typically valid for 1 year depending on the awarding body and organisational requirements.
+</p>
+
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<i class="fa fa-check-circle mt-1"></i>
+<p>Aligned with RRN and least-restrictive practice standards</p>
+</div>
+
+<div class="flex items-start gap-3">
+<i class="fa fa-check-circle mt-1"></i>
+<p>Suitable for NHS, social care, education and private providers</p>
+</div>
+
+<div class="flex items-start gap-3">
+<i class="fa fa-check-circle mt-1"></i>
+<p>Delivered by qualified and accredited trainers</p>
+</div>
+</div>
+</div>
+
+<div class="bg-white text-gray-700 rounded-3xl p-8 shadow-2xl" data-aos="fade-left">
+<h3 class="text-2xl font-bold text-green-700 mb-6">Who Should Attend?</h3>
+
+<div class="grid sm:grid-cols-2 gap-4 text-sm">
+<div class="bg-green-50 rounded-2xl p-4">Mental Health Support Workers</div>
+<div class="bg-green-50 rounded-2xl p-4">Healthcare Assistants</div>
+<div class="bg-green-50 rounded-2xl p-4">Supported Living Staff</div>
+<div class="bg-green-50 rounded-2xl p-4">Residential Care Staff</div>
+<div class="bg-green-50 rounded-2xl p-4">Security Personnel</div>
+<div class="bg-green-50 rounded-2xl p-4">Education & SEN Staff</div>
+</div>
+</div>
+
+</div>
+</section>
+<!-- BENEFITS -->
+<section id="benefits" class="py-20 bg-white px-6">
+<div class="max-w-7xl mx-auto">
+
+<h2 class="text-3xl font-bold text-center text-green-700 mb-12" data-aos="fade-up">
+Why Choose PMVA Training?
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="card bg-green-50 p-6 rounded-2xl border border-green-100" data-aos="zoom-in">
+<h3 class="font-bold text-green-700 mb-2">Confidence</h3>
+<p class="text-gray-600 text-sm">Develop safe decision-making skills in real care scenarios.</p>
+</div>
+
+<div class="card bg-green-50 p-6 rounded-2xl border border-green-100" data-aos="zoom-in" data-aos-delay="100">
+<h3 class="font-bold text-green-700 mb-2">Safety Skills</h3>
+<p class="text-gray-600 text-sm">Learn approved de-escalation and physical intervention techniques.</p>
+</div>
+
+<div class="card bg-green-50 p-6 rounded-2xl border border-green-100" data-aos="zoom-in" data-aos-delay="200">
+<h3 class="font-bold text-green-700 mb-2">Career Growth</h3>
+<p class="text-gray-600 text-sm">Enhance employability in healthcare and support roles.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="py-20 px-6 bg-white">
+<div class="max-w-7xl mx-auto">
+
+<h2 class="text-3xl font-bold text-center text-green-700 mb-14" data-aos="fade-up">
+What Our Trainees Say
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="bg-green-50 p-8 rounded-3xl border border-green-100" data-aos="fade-up">
+<p class="text-gray-600 italic mb-6">
+“The trainers were professional and the practical sessions were extremely helpful.”
+</p>
+<div>
+<h4 class="font-bold text-green-700">Sarah M.</h4>
+<p class="text-sm text-gray-500">Healthcare Support Worker</p>
+</div>
+</div>
+
+<div class="bg-green-50 p-8 rounded-3xl border border-green-100" data-aos="fade-up" data-aos-delay="100">
+<p class="text-gray-600 italic mb-6">
+“Excellent course structure with real-world scenarios and confidence-building exercises.”
+</p>
+<div>
+<h4 class="font-bold text-green-700">James T.</h4>
+<p class="text-sm text-gray-500">Mental Health Carer</p>
+</div>
+</div>
+
+<div class="bg-green-50 p-8 rounded-3xl border border-green-100" data-aos="fade-up" data-aos-delay="200">
+<p class="text-gray-600 italic mb-6">
+“Very engaging training and professionally delivered from start to finish.”
+</p>
+<div>
+<h4 class="font-bold text-green-700">Linda K.</h4>
+<p class="text-sm text-gray-500">Agency Staff</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="py-20 px-6 bg-green-50">
+<div class="max-w-5xl mx-auto">
+
+<h2 class="text-3xl font-bold text-center text-green-700 mb-12">
+Frequently Asked Questions
+</h2>
+
+<div class="space-y-4">
+
+<div class="bg-white rounded-2xl p-6 border border-green-100">
+<h3 class="font-bold mb-2">Who should attend PMVA training?</h3>
+<p class="text-gray-600 text-sm">Healthcare workers, carers, support staff, nurses, agency workers and professionals working in challenging care environments.</p>
+</div>
+
+<div class="bg-white rounded-2xl p-6 border border-green-100">
+<h3 class="font-bold mb-2">Do I receive a certificate?</h3>
+<p class="text-gray-600 text-sm">Yes. Participants receive a recognised PMVA certificate upon successful completion.</p>
+</div>
+
+<div class="bg-white rounded-2xl p-6 border border-green-100">
+<h3 class="font-bold mb-2">Are refresher courses available?</h3>
+<p class="text-gray-600 text-sm">Yes. Annual refresher and advanced PMVA courses are available throughout the year.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="py-20 bg-green-700 text-white text-center px-6">
+<h2 class="text-4xl font-bold mb-6">Start Your Professional Training Today</h2>
+<a class="bg-white text-green-700 px-8 py-4 rounded-full font-bold btn">Enroll Now</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-white text-center p-6 text-gray-500">
+© 2026 PMVA Training | Deuvick International
+</footer>
+
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({duration:900,once:true});
+
+function toggleMenu(){
+  document.getElementById('menu').classList.toggle('hidden');
+}
+
+// Countdown
+const target = new Date("June 15, 2026 09:00:00").getTime();
+function update(){
+const now = new Date().getTime();
+const diff = target - now;
+
+const d = Math.floor(diff/(1000*60*60*24));
+const h = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+const m = Math.floor((diff%(1000*60*60))/(1000*60));
+const s = Math.floor((diff%(1000*60))/1000);
+
+document.getElementById('timer').innerText = `${d}:${h}:${m}:${s}`;
+}
+setInterval(update,1000);
+update();
+
+gsap.from("h1",{y:30,opacity:0,duration:1});
+</script>
+
+</body>
+</html>
+

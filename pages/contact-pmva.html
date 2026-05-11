@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Something Awesome</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        
+        /* Custom pulse for the Home Button highlight */
+        @keyframes pulse-border {
+            0%, 100% { box-shadow: 0 0 0 0px rgba(59, 130, 246, 0.7); }
+            50% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+        }
+        .highlight-home { animation: pulse-border 2s infinite; }
+    </style>
+</head>
+<body class="bg-slate-900 flex items-center justify-center min-h-screen overflow-hidden font-sans text-slate-300">
+
+    <!-- Background Decorative Blobs -->
+    <div class="absolute top-[-10%] left-[-10%] w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+
+    <div class="relative z-10 text-center px-6 max-w-2xl">
+        
+        <!-- HIGHLIGHTED: Active Home Button -->
+        <div class="mb-12 flex justify-center">
+            <a href="pmva.html" class="highlight-home group flex items-center gap-3 px-6 py-3 rounded-full bg-blue-600 text-white font-bold transition-all hover:bg-blue-500 active:scale-95 shadow-xl shadow-blue-500/20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                <span>Return to Homepage</span>
+            </a>
+        </div>
+
+        <!-- Animated Construction Icon -->
+        <div class="relative inline-block mb-8">
+            <div class="absolute inset-0 bg-blue-500 blur-2xl opacity-20 animate-ping"></div>
+            <div class="animate-float text-blue-400">
+                <svg class="w-20 h-20 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                </svg>
+            </div>
+        </div>
+
+        <h1 class="text-4xl md:text-6xl font-black text-white mb-4">
+            Under <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Construction</span>
+        </h1>
+        
+        <p class="text-slate-400 text-lg mb-10 max-w-md mx-auto">
+            We're building something special. In the meantime, stay connected with us below.
+        </p>
+
+        <!-- Progress Bar -->
+        <div class="max-w-xs mx-auto mb-12 bg-slate-800/50 p-4 rounded-2xl border border-slate-700/50">
+            <div class="flex justify-between mb-2 px-1">
+                <span class="text-xs font-bold text-blue-400 uppercase tracking-tighter">Development</span>
+                <span class="text-xs font-bold text-blue-400">85%</span>
+            </div>
+            <div class="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-full w-[85%] shadow-[0_0_10px_rgba(59,130,246,0.6)]"></div>
+            </div>
+        </div>
+
+        <!-- HIGHLIGHTED: Active WhatsApp Section -->
+        <div class="flex flex-col items-center gap-6">
+            <a href="https://wa.me/+263777799316?text=I'd%20like%20to%20know%20more%20about%20the%20launch!" 
+               target="_blank"
+               class="group relative flex items-center gap-3 px-8 py-4 bg-emerald-500/10 border border-emerald-500/50 rounded-2xl transition-all hover:bg-emerald-500 hover:text-white overflow-hidden active:scale-95">
+                
+                <!-- Glossy overlay effect -->
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
+                
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-emerald-500 group-hover:fill-white transition-colors" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.319 1.592 5.448 0 9.886-4.438 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.438-9.89 9.886-.001 2.125.593 3.857 1.654 5.438l-1.047 3.826 3.955-1.037zm11.082-6.406c-.302-.15-.1.787-.433.881-.316.088-.672-.05-.989-.168-1.016-.377-2.036-1.017-2.815-1.796-.779-.779-1.419-1.799-1.796-2.815-.118-.317-.256-.673-.168-.989.094-.333 1.031-.131.881-.433-.146-.293-.691-1.666-.947-2.28-.24-.576-.489-.485-.672-.494l-.574-.01c-.198 0-.521.074-.794.371-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.574-.349z"/>
+                </svg>
+                <span class="font-bold text-emerald-500 group-hover:text-white transition-colors">Chat With Developer on WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <style>
+        @keyframes shimmer {
+            100% { transform: translateX(100%); }
+        }
+    </style>
+</body>
+</html>

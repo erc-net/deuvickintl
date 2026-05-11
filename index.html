@@ -1,0 +1,794 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Deuvick International</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- AOS Animation -->
+  <link
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    *{
+      scroll-behavior: smooth;
+    }
+
+    body{
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+      background: #f5f9ff;
+    }
+
+    .hero-bg{
+      background:
+      linear-gradient(rgba(0,42,92,0.90), rgba(0,42,92,0.92)),
+      url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1800&auto=format&fit=crop');
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .glass{
+      background: rgba(255,255,255,0.10);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .floating{
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%{
+        transform: translateY(0px);
+      }
+
+      50%{
+        transform: translateY(-15px);
+      }
+
+      100%{
+        transform: translateY(0px);
+      }
+    }
+
+    .rotateSlow{
+      animation: rotateSlow 20s linear infinite;
+    }
+
+    @keyframes rotateSlow{
+      from{
+        transform: rotate(0deg);
+      }
+
+      to{
+        transform: rotate(360deg);
+      }
+    }
+
+    .gradient-text{
+      background: linear-gradient(to right, #facc15, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .card-hover{
+      transition: all 0.4s ease;
+    }
+
+    .card-hover:hover{
+      transform: translateY(-10px);
+    }
+  </style>
+</head>
+
+<body class="text-gray-800">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-md">
+
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+      <div class="flex items-center justify-between py-4">
+
+        <!-- LOGO -->
+        <a href="#" class="flex items-center gap-4">
+
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+            alt="Logo"
+            class="w-14 h-14 rounded-full border-4 border-yellow-400 shadow-lg object-cover"
+          >
+
+          <div>
+            <h1 class="text-lg md:text-2xl font-bold text-blue-950">
+              Deuvick International
+            </h1>
+
+            <p class="text-xs text-gray-500 hidden sm:block">
+              Professional Global Solutions
+            </p>
+          </div>
+
+        </a>
+
+        <!-- DESKTOP NAV -->
+        <nav class="hidden lg:flex items-center gap-8 font-medium text-gray-700">
+
+          <a href="#" class="hover:text-yellow-500 transition duration-300">
+            Home
+          </a>
+
+          <a href="pages/pmva.html" class="text-green-500 font-bold transition duration-300">
+            PMVA Training
+          </a>
+
+          <a href="pages/services.html" class="hover:text-yellow-500 transition duration-300">
+            Services
+          </a>
+
+          <a href="pages/about.html" class="hover:text-yellow-500 transition duration-300">
+            About Us
+          </a>
+
+          <a href="pages/contact.html"
+            class="bg-yellow-400 hover:bg-yellow-500 text-blue-950 px-5 py-3 rounded-full shadow-lg transition duration-300">
+            Contact Us
+          </a>
+
+        </nav>
+
+        <!-- MOBILE BUTTON -->
+        <button
+          id="menuBtn"
+          class="lg:hidden text-blue-950"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobileMenu"
+      class="hidden lg:hidden bg-white border-t border-gray-200 shadow-xl"
+    >
+
+      <div class="px-6 py-6 space-y-5">
+
+        <a href="#" class="block hover:text-yellow-500 font-medium">
+          Home
+        </a>
+
+        <a href="pages/pmva.html" class="block hover:text-yellow-500 font-medium">
+          PMVA
+        </a>
+
+        <a href="pages/services.html" class="block hover:text-yellow-500 font-medium">
+          Services
+        </a>
+
+        <a href="pages/about.html" class="block hover:text-yellow-500 font-medium">
+          About Us
+        </a>
+
+        <a
+          href="pages/contact.html"
+          class="block text-center bg-yellow-400 text-blue-950 py-3 rounded-xl font-semibold"
+        >
+          Contact Us
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero-bg relative min-h-screen flex items-center px-5 overflow-hidden">
+
+    <!-- BACKGROUND EFFECTS -->
+    <div class="absolute inset-0 overflow-hidden">
+
+      <div class="absolute w-96 h-96 bg-yellow-400/20 rounded-full blur-3xl top-0 left-0 floating"></div>
+
+      <div class="absolute w-[500px] h-[500px] bg-blue-400/20 rounded-full blur-3xl bottom-0 right-0 floating"></div>
+
+      <div class="absolute top-1/2 left-1/2 w-80 h-80 border border-yellow-400/20 rounded-full rotateSlow"></div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto relative z-10 w-full">
+
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- LEFT CONTENT -->
+        <div data-aos="fade-right">
+
+          <div class="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/20 text-yellow-300 px-4 py-2 rounded-full mb-6">
+            🌍 Trusted International Business Solutions
+          </div>
+
+          <h1 class="text-5xl md:text-6xl xl:text-7xl font-extrabold text-white leading-tight mb-6">
+
+            Smart Solutions
+            <span class="gradient-text">
+              For Modern Businesses
+            </span>
+
+          </h1>
+
+          <p class="text-lg text-gray-200 leading-relaxed max-w-2xl mb-8">
+
+            Deuvick International delivers professional operational support,
+            virtual assistance, customer communication solutions,
+            and agricultural support services for businesses globally.
+
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+
+            <a
+              href="contact.html"
+              class="bg-yellow-400 hover:bg-yellow-500 text-blue-950 px-8 py-4 rounded-full font-semibold shadow-2xl transition duration-300"
+            >
+              Contact Us
+            </a>
+
+            <a
+              href="#about"
+              class="border border-white/30 hover:bg-white hover:text-blue-950 text-white px-8 py-4 rounded-full font-semibold transition duration-300"
+            >
+              Learn More
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div
+          class="relative"
+          data-aos="fade-left"
+        >
+
+          <div class="glass rounded-[35px] p-8 shadow-2xl">
+
+            <div class="grid sm:grid-cols-2 gap-5">
+
+              <!-- CARD -->
+              <div class="bg-white rounded-3xl p-6 text-center shadow-lg floating card-hover">
+
+                <div class="text-5xl mb-4">
+                  📞
+                </div>
+
+                <h3 class="font-bold text-blue-950 text-lg mb-3">
+                  Communication
+                </h3>
+
+                <p class="text-gray-600 text-sm">
+                  Reliable customer communication and support operations.
+                </p>
+
+              </div>
+
+              <!-- CARD -->
+              <div class="bg-white rounded-3xl p-6 text-center shadow-lg floating card-hover">
+
+                <div class="text-5xl mb-4">
+                  💻
+                </div>
+
+                <h3 class="font-bold text-blue-950 text-lg mb-3">
+                  Virtual Support
+                </h3>
+
+                <p class="text-gray-600 text-sm">
+                  Efficient online support and administrative coordination.
+                </p>
+
+              </div>
+
+              <!-- CARD -->
+              <div class="bg-white rounded-3xl p-6 text-center shadow-lg floating card-hover">
+
+                <div class="text-5xl mb-4">
+                  📋
+                </div>
+
+                <h3 class="font-bold text-blue-950 text-lg mb-3">
+                  Administration
+                </h3>
+
+                <p class="text-gray-600 text-sm">
+                  Organized remote administrative and operational support.
+                </p>
+
+              </div>
+
+              <!-- CARD -->
+              <div class="bg-white rounded-3xl p-6 text-center shadow-lg floating card-hover">
+
+                <div class="text-5xl mb-4">
+                  🌾
+                </div>
+
+                <h3 class="font-bold text-blue-950 text-lg mb-3">
+                  Agriculture
+                </h3>
+
+                <p class="text-gray-600 text-sm">
+                  Sustainable agricultural and farming support solutions.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section
+    id="about"
+    class="py-24 px-5 bg-white relative overflow-hidden"
+  >
+
+    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-40"></div>
+
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-yellow-100 rounded-full blur-3xl opacity-40"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- IMAGE -->
+        <div
+          class="relative"
+          data-aos="fade-right"
+        >
+
+          <img
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1400&auto=format&fit=crop"
+            alt="Business Team"
+            class="rounded-[35px] shadow-2xl w-full object-cover"
+          >
+
+          <div class="absolute -bottom-8 left-6 bg-white rounded-3xl shadow-2xl p-6 w-[280px] hidden sm:block">
+
+            <div class="flex items-center gap-4">
+
+              <div class="w-16 h-16 rounded-2xl bg-yellow-400 flex items-center justify-center text-3xl">
+                🌍
+              </div>
+
+              <div>
+                <h4 class="text-blue-950 font-bold text-xl">
+                  Global Reach
+                </h4>
+
+                <p class="text-gray-600 text-sm">
+                  Trusted support services for modern organizations.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- CONTENT -->
+        <div data-aos="fade-left">
+
+          <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-950 px-4 py-2 rounded-full font-medium mb-5">
+            Professional Excellence
+          </div>
+
+          <h2 class="text-4xl md:text-5xl font-bold text-blue-950 mb-8">
+            Helping Businesses Operate Efficiently Worldwide
+          </h2>
+
+          <p class="text-gray-600 leading-relaxed mb-10 text-lg">
+            Deuvick International focuses on delivering modern operational
+            support, customer engagement solutions,
+            virtual administration, and agricultural assistance
+            tailored to businesses and organizations globally.
+          </p>
+
+          <div class="space-y-8">
+
+            <!-- FEATURE -->
+            <div class="flex gap-5">
+
+              <div class="min-w-[70px] h-[70px] rounded-2xl bg-blue-100 flex items-center justify-center text-3xl shadow-lg">
+                📞
+              </div>
+
+              <div>
+                <h4 class="text-2xl font-bold text-blue-950 mb-3">
+                  Professional Communication
+                </h4>
+
+                <p class="text-gray-600 leading-relaxed">
+                  Reliable customer interaction and operational communication services.
+                </p>
+              </div>
+
+            </div>
+
+            <!-- FEATURE -->
+            <div class="flex gap-5">
+
+              <div class="min-w-[70px] h-[70px] rounded-2xl bg-yellow-100 flex items-center justify-center text-3xl shadow-lg">
+                💻
+              </div>
+
+              <div>
+                <h4 class="text-2xl font-bold text-blue-950 mb-3">
+                  Virtual Administrative Support
+                </h4>
+
+                <p class="text-gray-600 leading-relaxed">
+                  Streamlined online assistance and remote operational management.
+                </p>
+              </div>
+
+            </div>
+
+            <!-- FEATURE -->
+            <div class="flex gap-5">
+
+              <div class="min-w-[70px] h-[70px] rounded-2xl bg-blue-100 flex items-center justify-center text-3xl shadow-lg">
+                🌾
+              </div>
+
+              <div>
+                <h4 class="text-2xl font-bold text-blue-950 mb-3">
+                  Agricultural Solutions
+                </h4>
+
+                <p class="text-gray-600 leading-relaxed">
+                  Sustainable farming and agricultural support solutions.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= PROFESSIONAL STATS ================= -->
+  <section
+    id="solutions"
+    class="py-24 px-5 bg-blue-950 text-white relative overflow-hidden"
+  >
+
+    <div class="absolute top-0 left-0 w-96 h-96 bg-yellow-400/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+
+      <div
+        class="text-center mb-16"
+        data-aos="fade-up"
+      >
+
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          Trusted Professional Solutions
+        </h2>
+
+        <p class="text-gray-300 max-w-3xl mx-auto text-lg">
+          Delivering professional operational support services
+          with innovation, reliability, and excellence.
+        </p>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+
+        <!-- STAT -->
+        <div
+          class="glass rounded-3xl p-10 text-center"
+          data-aos="zoom-in"
+        >
+
+          <h3 class="text-5xl font-bold text-yellow-400 mb-4">
+            24/7
+          </h3>
+
+          <p class="text-gray-200 text-lg">
+            Customer Support
+          </p>
+
+        </div>
+
+        <!-- STAT -->
+        <div
+          class="glass rounded-3xl p-10 text-center"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+        >
+
+          <h3 class="text-5xl font-bold text-yellow-400 mb-4">
+            100%
+          </h3>
+
+          <p class="text-gray-200 text-lg">
+            Professional Service
+          </p>
+
+        </div>
+
+        <!-- STAT -->
+        <div
+          class="glass rounded-3xl p-10 text-center"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
+
+          <h3 class="text-5xl font-bold text-yellow-400 mb-4">
+            Global
+          </h3>
+
+          <p class="text-gray-200 text-lg">
+            Business Solutions
+          </p>
+
+        </div>
+
+        <!-- STAT -->
+        <div
+          class="glass rounded-3xl p-10 text-center"
+          data-aos="zoom-in"
+          data-aos-delay="300"
+        >
+
+          <h3 class="text-5xl font-bold text-yellow-400 mb-4">
+            Smart
+          </h3>
+
+          <p class="text-gray-200 text-lg">
+            Operational Support
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= WHY CHOOSE US ================= -->
+  <section
+    id="why"
+    class="py-24 px-5 bg-white"
+  >
+
+    <div class="max-w-7xl mx-auto">
+
+      <div
+        class="text-center mb-16"
+        data-aos="fade-up"
+      >
+
+        <h2 class="text-4xl md:text-5xl font-bold text-blue-950 mb-5">
+          Why Choose Deuvick International
+        </h2>
+
+        <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+          We combine professionalism, efficiency,
+          innovation, and modern support solutions
+          to help businesses succeed.
+        </p>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+        <!-- CARD -->
+        <div
+          class="bg-[#f5f9ff] rounded-[35px] p-8 shadow-lg card-hover"
+          data-aos="fade-up"
+        >
+
+          <div class="w-20 h-20 bg-blue-100 rounded-3xl flex items-center justify-center text-4xl mb-6">
+            ⚡
+          </div>
+
+          <h3 class="text-2xl font-bold text-blue-950 mb-4">
+            Fast Response
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed">
+            Quick and efficient support tailored for modern business needs.
+          </p>
+
+        </div>
+
+        <!-- CARD -->
+        <div
+          class="bg-[#f5f9ff] rounded-[35px] p-8 shadow-lg card-hover"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+
+          <div class="w-20 h-20 bg-yellow-100 rounded-3xl flex items-center justify-center text-4xl mb-6">
+            🔒
+          </div>
+
+          <h3 class="text-2xl font-bold text-blue-950 mb-4">
+            Reliable Solutions
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed">
+            Trusted professional support and operational reliability.
+          </p>
+
+        </div>
+
+        <!-- CARD -->
+        <div
+          class="bg-[#f5f9ff] rounded-[35px] p-8 shadow-lg card-hover"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+
+          <div class="w-20 h-20 bg-blue-100 rounded-3xl flex items-center justify-center text-4xl mb-6">
+            🌍
+          </div>
+
+          <h3 class="text-2xl font-bold text-blue-950 mb-4">
+            Global Reach
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed">
+            Supporting businesses and organizations internationally.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= CTA SECTION ================= -->
+  <section class="py-24 px-5 bg-white">
+
+    <div
+      class="max-w-5xl mx-auto bg-gradient-to-r from-blue-950 to-blue-700 rounded-[40px] p-10 md:p-16 text-center text-white shadow-2xl"
+      data-aos="zoom-in"
+    >
+
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        Ready To Work With Us?
+      </h2>
+
+      <p class="text-gray-200 text-lg max-w-3xl mx-auto mb-10">
+        Partner with Deuvick International and experience
+        professional operational support tailored for your organization.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-5">
+
+        <a
+          href="/pages/contact.html"
+          class="bg-yellow-400 hover:bg-yellow-500 text-blue-950 px-8 py-4 rounded-full font-semibold shadow-xl transition duration-300"
+        >
+          Contact Our Team
+        </a>
+
+        <a
+          href="#about"
+          class="border border-white/30 hover:bg-white hover:text-blue-950 px-8 py-4 rounded-full font-semibold transition duration-300"
+        >
+          Learn More
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-blue-950 text-white py-10 px-5">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+
+        <div class="text-center md:text-left">
+
+          <h3 class="text-2xl font-bold text-yellow-400 mb-2">
+            Deuvick International
+          </h3>
+
+          <p class="text-gray-300">
+            Professional Solutions. Global Connections.
+          </p>
+
+        </div>
+
+        <div class="text-gray-400 text-sm text-center md:text-right">
+          © 2026 Deuvick International. All rights reserved.
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- MOBILE MENU SCRIPT -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- AOS SCRIPT -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+  </script>
+
+</body>
+</html>
+```
